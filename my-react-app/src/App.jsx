@@ -1,5 +1,6 @@
 
 import Pokecard from './pokecard'
+import Pokedex from './Pokedex'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   name = {"Charmander"} 
   type = {"Fire"}
   base_experience = {62}/>
+  <Pokedex/>
 </div>
   )
 }
