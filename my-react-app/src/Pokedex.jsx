@@ -1,3 +1,5 @@
+import Pokecard from './Pokecard'; 
+
 function Pokedex() {
     const defaultProps = {
         pokemon: [
@@ -18,10 +20,12 @@ function Pokedex() {
             <ul>
                 {defaultProps.pokemon.map((pokemon) => (
                     <li key={pokemon.id}>
-                        <div>ID: {pokemon.id}</div>
-                        <div>Name: {pokemon.name}</div>
-                        <div>Type: {pokemon.type}</div>
-                        <div>Base Experience: {pokemon.base_experience}</div>
+                        <Pokecard
+                            id={pokemon.id}
+                            name={pokemon.name}
+                            type={pokemon.type}
+                            base_experience={pokemon.base_experience}
+                        />
                     </li>
                 ))}
             </ul>
@@ -30,3 +34,4 @@ function Pokedex() {
 }
 
 export default Pokedex;
+
