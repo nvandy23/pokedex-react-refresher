@@ -1,4 +1,5 @@
 import Pokecard from './Pokecard'; 
+import './pokedex.css';
 
 function Pokedex() {
     const defaultProps = {
@@ -15,23 +16,23 @@ function Pokedex() {
     };
 
     return (
-        <div>
+        <div className="Pokedex">
             <h1>Pokedex</h1>
-            <ul>
+            <div className="Pokedex-cards">
                 {defaultProps.pokemon.map((pokemon) => (
-                    <li key={pokemon.id}>
-                        <Pokecard
-                            id={pokemon.id}
-                            name={pokemon.name}
-                            type={pokemon.type}
-                            base_experience={pokemon.base_experience}
-                        />
-                    </li>
+                    <Pokecard
+                        key={pokemon.id} 
+                        id={pokemon.id}
+                        name={pokemon.name}
+                        type={pokemon.type}
+                        base_experience={pokemon.base_experience}
+                    />
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
 
 export default Pokedex;
+
 
